@@ -51,7 +51,7 @@ namespace MvcClient.Authorization
 
             if (role != null && accessLevel != null)
             {
-                if (role.Value == "Administrator" && accessLevel.Value == "Read")
+                if (role.Value == "Administrator")
                     context.Succeed(requirement);
             }
             else

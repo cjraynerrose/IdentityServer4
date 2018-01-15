@@ -617,3 +617,219 @@
 2018-01-12 11:33:30.841 +00:00 [DBG] Connection id "0HLAPM06EI7BA" disconnecting.
 2018-01-12 11:33:30.842 +00:00 [DBG] Connection id "0HLAPM06EI7BA" sending FIN.
 2018-01-12 11:33:30.852 +00:00 [DBG] Connection id "0HLAPM06EI7BA" stopped.
+2018-01-15 08:28:26.812 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 08:28:26.901 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 08:28:26.930 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 08:28:26.979 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 08:28:27.001 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:28:27.002 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 08:28:27.004 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:28:27.005 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 08:28:27.012 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 08:28:27.019 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 08:28:27.021 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 08:28:27.295 +00:00 [DBG] Hosting starting
+2018-01-15 08:28:27.486 +00:00 [DBG] Hosting started
+2018-01-15 08:28:27.487 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 08:28:27.488 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 08:47:43.935 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 08:47:44.025 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 08:47:44.048 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 08:47:44.088 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 08:47:44.121 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:47:44.123 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 08:47:44.127 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:47:44.132 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 08:47:44.139 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 08:47:44.146 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 08:47:44.148 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 08:47:44.597 +00:00 [DBG] Hosting starting
+2018-01-15 08:47:46.410 +00:00 [DBG] Hosting started
+2018-01-15 08:47:46.412 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 08:47:46.435 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 08:53:30.530 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 08:53:30.584 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 08:53:30.594 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 08:53:30.611 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 08:53:30.626 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:53:30.627 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 08:53:30.628 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:53:30.630 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 08:53:30.634 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 08:53:30.639 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 08:53:30.640 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 08:53:30.760 +00:00 [DBG] Hosting starting
+2018-01-15 08:53:30.886 +00:00 [DBG] Hosting started
+2018-01-15 08:53:30.886 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 08:53:30.887 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 08:58:55.077 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 08:58:55.125 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 08:58:55.140 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 08:58:55.161 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 08:58:55.181 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:58:55.183 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 08:58:55.185 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 08:58:55.186 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 08:58:55.191 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 08:58:55.199 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 08:58:55.201 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 08:58:55.409 +00:00 [DBG] Hosting starting
+2018-01-15 08:58:55.555 +00:00 [DBG] Hosting started
+2018-01-15 08:58:55.555 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 08:58:55.556 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 09:06:26.180 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 09:06:26.245 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 09:06:26.261 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 09:06:26.292 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 09:06:26.315 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 09:06:26.316 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 09:06:26.319 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 09:06:26.321 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 09:06:26.326 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 09:06:26.332 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 09:06:26.334 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 09:06:26.539 +00:00 [DBG] Hosting starting
+2018-01-15 09:06:26.719 +00:00 [DBG] Hosting started
+2018-01-15 09:06:26.720 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 09:06:26.722 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 09:23:30.412 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 09:23:30.475 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 09:23:30.495 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 09:23:30.520 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 09:23:30.541 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 09:23:30.543 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 09:23:30.544 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 09:23:30.547 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 09:23:30.553 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 09:23:30.565 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 09:23:30.568 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 09:23:30.779 +00:00 [DBG] Hosting starting
+2018-01-15 09:23:30.946 +00:00 [DBG] Hosting started
+2018-01-15 09:23:30.947 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 09:23:30.948 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 10:33:53.448 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 10:33:53.516 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 10:33:53.539 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 10:33:53.599 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 10:33:53.695 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 10:33:53.698 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 10:33:53.700 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 10:33:53.702 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 10:33:53.708 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 10:33:53.716 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 10:33:53.719 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 10:33:54.475 +00:00 [DBG] Hosting starting
+2018-01-15 10:33:55.338 +00:00 [DBG] Hosting started
+2018-01-15 10:33:55.347 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 10:33:55.367 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 11:01:07.937 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 11:01:07.981 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 11:01:07.991 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 11:01:08.008 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 11:01:08.025 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:01:08.026 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 11:01:08.027 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:01:08.028 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 11:01:08.032 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 11:01:08.038 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 11:01:08.039 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 11:01:08.204 +00:00 [DBG] Hosting starting
+2018-01-15 11:01:08.339 +00:00 [DBG] Hosting started
+2018-01-15 11:01:08.340 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 11:01:08.341 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 11:02:22.838 +00:00 [DBG] Connection id "0HLAS0TQ4ICHN" started.
+2018-01-15 11:02:22.992 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/identity  
+2018-01-15 11:02:23.691 +00:00 [INF] Successfully validated the token.
+2018-01-15 11:02:23.711 +00:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was successfully authenticated.
+2018-01-15 11:02:23.724 +00:00 [INF] AuthenticationScheme: Bearer was successfully authenticated.
+2018-01-15 11:02:23.793 +00:00 [DBG] Request successfully matched the route with name 'null' and template 'Identity'.
+2018-01-15 11:02:23.849 +00:00 [DBG] Executing action Api.Controllers.IdentityController.Get (Api)
+2018-01-15 11:02:23.858 +00:00 [INF] Authorization was successful for user: null.
+2018-01-15 11:02:23.868 +00:00 [INF] Executing action method Api.Controllers.IdentityController.Get (Api) with arguments (null) - ModelState is "Valid"
+2018-01-15 11:02:23.874 +00:00 [DBG] Executed action method Api.Controllers.IdentityController.Get (Api), returned result Microsoft.AspNetCore.Mvc.JsonResult.
+2018-01-15 11:02:23.879 +00:00 [INF] Executing JsonResult, writing value System.Linq.Enumerable+SelectEnumerableIterator`2[System.Security.Claims.Claim,<>f__AnonymousType0`2[System.String,System.String]].
+2018-01-15 11:02:23.903 +00:00 [INF] Executed action Api.Controllers.IdentityController.Get (Api) in 47.432900000000004ms
+2018-01-15 11:02:23.911 +00:00 [DBG] Connection id "0HLAS0TQ4ICHN" completed keep alive response.
+2018-01-15 11:02:23.914 +00:00 [INF] Request finished in 928.3761ms 200 application/json; charset=utf-8
+2018-01-15 11:02:30.892 +00:00 [DBG] Connection id "0HLAS0TQ4ICHO" started.
+2018-01-15 11:02:30.894 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/identity  
+2018-01-15 11:02:30.900 +00:00 [INF] Successfully validated the token.
+2018-01-15 11:02:30.906 +00:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was successfully authenticated.
+2018-01-15 11:02:30.910 +00:00 [INF] AuthenticationScheme: Bearer was successfully authenticated.
+2018-01-15 11:02:30.919 +00:00 [DBG] Request successfully matched the route with name 'null' and template 'Identity'.
+2018-01-15 11:02:30.921 +00:00 [DBG] Executing action Api.Controllers.IdentityController.Get (Api)
+2018-01-15 11:02:30.924 +00:00 [INF] Authorization was successful for user: 117e180d-a73e-441b-a75f-e5cfbdbc8c01.
+2018-01-15 11:02:30.935 +00:00 [INF] Executing action method Api.Controllers.IdentityController.Get (Api) with arguments (null) - ModelState is "Valid"
+2018-01-15 11:02:30.947 +00:00 [DBG] Executed action method Api.Controllers.IdentityController.Get (Api), returned result Microsoft.AspNetCore.Mvc.JsonResult.
+2018-01-15 11:02:30.953 +00:00 [INF] Executing JsonResult, writing value System.Linq.Enumerable+SelectEnumerableIterator`2[System.Security.Claims.Claim,<>f__AnonymousType0`2[System.String,System.String]].
+2018-01-15 11:02:30.964 +00:00 [INF] Executed action Api.Controllers.IdentityController.Get (Api) in 39.989200000000004ms
+2018-01-15 11:02:30.967 +00:00 [DBG] Connection id "0HLAS0TQ4ICHO" completed keep alive response.
+2018-01-15 11:02:30.969 +00:00 [INF] Request finished in 75.0973ms 200 application/json; charset=utf-8
+2018-01-15 11:03:05.499 +00:00 [DBG] Connection id "0HLAS0TQ4ICHN" reset.
+2018-01-15 11:03:05.499 +00:00 [DBG] Connection id "0HLAS0TQ4ICHO" reset.
+2018-01-15 11:03:05.526 +00:00 [DBG] Connection id "0HLAS0TQ4ICHN" disconnecting.
+2018-01-15 11:03:05.528 +00:00 [DBG] Connection id "0HLAS0TQ4ICHO" disconnecting.
+2018-01-15 11:03:05.542 +00:00 [DBG] Connection id "0HLAS0TQ4ICHO" sending FIN.
+2018-01-15 11:03:05.557 +00:00 [DBG] Connection id "0HLAS0TQ4ICHO" stopped.
+2018-01-15 11:03:05.616 +00:00 [DBG] Connection id "0HLAS0TQ4ICHN" sending FIN.
+2018-01-15 11:03:05.674 +00:00 [DBG] Connection id "0HLAS0TQ4ICHN" stopped.
+2018-01-15 11:05:01.876 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 11:05:01.938 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 11:05:01.956 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 11:05:01.991 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 11:05:02.023 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:05:02.029 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 11:05:02.031 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:05:02.033 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 11:05:02.041 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 11:05:02.051 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 11:05:02.053 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 11:05:02.381 +00:00 [DBG] Hosting starting
+2018-01-15 11:05:02.593 +00:00 [DBG] Hosting started
+2018-01-15 11:05:02.593 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 11:05:02.596 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 11:09:56.787 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 11:09:56.846 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 11:09:56.861 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 11:09:56.882 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 11:09:56.899 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:09:56.901 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 11:09:56.902 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:09:56.903 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 11:09:56.907 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 11:09:56.917 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 11:09:56.921 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 11:09:57.109 +00:00 [DBG] Hosting starting
+2018-01-15 11:09:57.324 +00:00 [DBG] Hosting started
+2018-01-15 11:09:57.326 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 11:09:57.330 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 11:18:03.280 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 11:18:03.354 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 11:18:03.371 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 11:18:03.404 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 11:18:03.427 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:18:03.429 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 11:18:03.431 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:18:03.433 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 11:18:03.440 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 11:18:03.448 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 11:18:03.451 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 11:18:03.687 +00:00 [DBG] Hosting starting
+2018-01-15 11:18:03.974 +00:00 [DBG] Hosting started
+2018-01-15 11:18:03.978 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 11:18:03.980 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup
+2018-01-15 11:21:41.486 +00:00 [INF] User profile is available. Using 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-01-15 11:21:41.564 +00:00 [DBG] Reading data from file 'C:\Users\cjrayner-rose\AppData\Local\ASP.NET\DataProtection-Keys\key-36057470-18ae-4ef5-b357-7c21cbc1c4ed.xml'.
+2018-01-15 11:21:41.585 +00:00 [DBG] Found key "36057470-18ae-4ef5-b357-7c21cbc1c4ed".
+2018-01-15 11:21:41.620 +00:00 [DBG] Considering key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" with expiration date "2018-02-27T08:16:48.3866174+00:00" as default key.
+2018-01-15 11:21:41.647 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:21:41.662 +00:00 [DBG] Decrypting secret element using Windows DPAPI.
+2018-01-15 11:21:41.666 +00:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2018-01-15 11:21:41.668 +00:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2018-01-15 11:21:41.676 +00:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2018-01-15 11:21:41.684 +00:00 [DBG] Using key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" as the default key.
+2018-01-15 11:21:41.687 +00:00 [DBG] Key ring with default key "36057470-18ae-4ef5-b357-7c21cbc1c4ed" was loaded during application startup.
+2018-01-15 11:21:42.011 +00:00 [DBG] Hosting starting
+2018-01-15 11:21:42.261 +00:00 [DBG] Hosting started
+2018-01-15 11:21:42.262 +00:00 [DBG] Loaded hosting startup assembly Api
+2018-01-15 11:21:42.264 +00:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.ApplicationInsights.HostingStartup

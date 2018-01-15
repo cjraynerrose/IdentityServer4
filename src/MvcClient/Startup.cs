@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using MvcClient.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 
@@ -50,6 +51,12 @@ namespace MvcClient
                     options.Scope.Add("api1");
                     options.Scope.Add("AdminPermission"); // NEW CHANGE
                     options.Scope.Add("offline_access");
+
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        NameClaimType = "name",
+                        RoleClaimType = "role"
+                    };
                 });
         }
 

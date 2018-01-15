@@ -24,6 +24,7 @@ namespace IdentityServerWithAspNetIdentity
                     UserClaims =
                     {
                         "AdminPermission",
+                        "role",
                     }
                 }
             };
@@ -39,7 +40,7 @@ namespace IdentityServerWithAspNetIdentity
                     {
                         new Scope("AdminPermission", "Admin Permission")
                         {
-                            UserClaims = { "AdminPermission" }
+                            UserClaims = { "AdminPermission", "role"/* NEW CHANGE -2*/ }
                         }
                     }
                 }
@@ -60,7 +61,7 @@ namespace IdentityServerWithAspNetIdentity
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
 
                     RequireConsent = false,
-
+                    
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
@@ -70,6 +71,7 @@ namespace IdentityServerWithAspNetIdentity
                     PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
                     AllowAccessTokensViaBrowser = true, // NEW CHANGE
+                    AlwaysIncludeUserClaimsInIdToken = true, // NEW CHANGE -2
 
                     AllowedScopes =
                     {
@@ -77,6 +79,7 @@ namespace IdentityServerWithAspNetIdentity
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1",
                         "AdminPermission", // NEW CHANGE
+                        "role", // NEW CHANGE -2
                     },
                     AllowOfflineAccess = true,
                 },

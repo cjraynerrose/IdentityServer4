@@ -116,7 +116,7 @@ namespace IdentityServerWithAspNetIdentity
 
             CreateRoles(serviceProvider).Wait();
         }
-
+   
         private async Task CreateRoles(IServiceProvider serviceProvider)
         {
             //adding custom roles
