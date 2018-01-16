@@ -1,3 +1,1 @@
-# Quickstart #6: IdentityServer and ASP.NET Identity
-
-This quickstart uses ASP.NET Identity for identity management.
+# This code is based upon the IdentityServer4 Quickstart Samples
