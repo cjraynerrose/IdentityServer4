@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
 using MvcClient.Authorization;
 using System.IdentityModel.Tokens.Jwt;
 
@@ -37,27 +36,18 @@ namespace MvcClient
                 .AddOpenIdConnect("oidc", options =>
                 {
                     options.SignInScheme = "Cookies";
-
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
-
                     options.ClientId = "mvc";
                     options.ClientSecret = "secret";
-                    options.ResponseType = "code id_token token"; // NEW CHANGE (token)
-
+                    options.ResponseType = "code id_token"; // Undo (token)
                     options.SaveTokens = true;
                     options.GetClaimsFromUserInfoEndpoint = true;
-
                     options.Scope.Add("api1");
-                    options.Scope.Add("AdminPermission"); // NEW CHANGE
                     options.Scope.Add("offline_access");
-
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        NameClaimType = "name",
-                        RoleClaimType = "role"
-                    };
                 });
+
+            services.AddAuthorization(options => options.AddPolicy("Admin", policy => policy.RequireClaim("adminpermission", "Update")));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

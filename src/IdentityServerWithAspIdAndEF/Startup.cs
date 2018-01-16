@@ -10,7 +10,6 @@ using IdentityServerWithAspNetIdentity.Data;
 using IdentityServerWithAspNetIdentity.Models;
 using IdentityServerWithAspNetIdentity.Services;
 using System.Reflection;
-using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 
 namespace IdentityServerWithAspNetIdentity
@@ -27,8 +26,11 @@ namespace IdentityServerWithAspNetIdentity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            string migrationsAssemblyName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), sqlOptions => sqlOptions.MigrationsAssembly(migrationsAssemblyName)));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -39,25 +41,26 @@ namespace IdentityServerWithAspNetIdentity
 
             services.AddMvc();
 
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
-            
+
             // configure identity server with in-memory stores, keys, clients and scopes
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddAspNetIdentity<ApplicationUser>()
+                .AddProfileService<ProfileService>()
                 // this adds the config data from DB (clients, resources)
                 .AddConfigurationStore(options =>
                 {
                     options.ConfigureDbContext = builder =>
-                        builder.UseSqlServer(connectionString,
+                        builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                             sql => sql.MigrationsAssembly(migrationsAssembly));
                 })
                 // this adds the operational data from DB (codes, tokens, consents)
                 .AddOperationalStore(options =>
                 {
                     options.ConfigureDbContext = builder =>
-                        builder.UseSqlServer(connectionString,
+                        builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
                             sql => sql.MigrationsAssembly(migrationsAssembly));
 
                     // this enables automatic token cleanup. this is optional.
@@ -65,27 +68,7 @@ namespace IdentityServerWithAspNetIdentity
                     options.TokenCleanupInterval = 30;
                 });
 
-            services.AddAuthentication()
-                .AddGoogle("Google", options =>
-                {
-                    options.ClientId = "434483408261-55tc8n0cs4ff1fe21ea8df2o443v2iuc.apps.googleusercontent.com";
-                    options.ClientSecret = "3gcoTrEDPPJ0ukn_aYYT6PWo";
-                })
-                .AddOpenIdConnect("oidc", "OpenID Connect", options =>
-                {
-                    options.Authority = "https://demo.identityserver.io/";
-                    options.ClientId = "implicit";
-                    options.SaveTokens = true;
 
-                 // options.GetClaimsFromUserInfoEndpoint = true; // NEW CHANGE
-                 // options.ResponseType = "code id_token token";  // NEW CHANGE
-
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        NameClaimType = "name",
-                        RoleClaimType = "role"
-                    };
-                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -104,7 +87,6 @@ namespace IdentityServerWithAspNetIdentity
 
             app.UseStaticFiles();
 
-            // app.UseAuthentication(); // not needed, since UseIdentityServer adds the authentication middleware
             app.UseIdentityServer();
 
             app.UseMvc(routes =>
@@ -116,55 +98,180 @@ namespace IdentityServerWithAspNetIdentity
 
             CreateRoles(serviceProvider).Wait();
         }
-   
+
         private async Task CreateRoles(IServiceProvider serviceProvider)
         {
             //adding custom roles
-            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var UserManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            
 
             string[] roleNames = { "Administrator", "Internal", "Customer" };
 
             foreach (var roleName in roleNames)
             {
                 //creating the roles and seeding them to the database
-                var roleExist = await RoleManager.RoleExistsAsync(roleName);
+                var roleExist = await roleManager.RoleExistsAsync(roleName);
 
                 if (roleExist)
-                    await RoleManager.DeleteAsync(await RoleManager.FindByNameAsync(roleName));
+                    await roleManager.DeleteAsync(await roleManager.FindByNameAsync(roleName));
 
                 var newRole = new IdentityRole(roleName);
-                await RoleManager.CreateAsync(newRole);
-
-                if (roleName == "Administrator")
-                    await RoleManager.AddClaimAsync(newRole, new Claim("AdminPermission", "Read"));
+                await roleManager.CreateAsync(newRole);
             }
 
-            //creating a super user who could maintain the web app
-            var poweruser = new ApplicationUser
+
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            var user = new ApplicationUser
             {
-                UserName = Configuration.GetSection("UserSettings")["UserEmail"],
-                Email = Configuration.GetSection("UserSettings")["UserEmail"]
+                UserName = Configuration.GetSection("SuperUserSettings")["UserEmail"],
+                Email = Configuration.GetSection("SuperUserSettings")["UserEmail"]
             };
 
-            string UserPassword = Configuration.GetSection("UserSettings")["UserPassword"];
+            string UserPassword = Configuration.GetSection("SuperUserSettings")["UserPassword"];
 
-            var userEmail = Configuration.GetSection("UserSettings")["UserEmail"];
+            var userEmail = Configuration.GetSection("SuperUserSettings")["UserEmail"];
 
-            var _user = await UserManager.FindByEmailAsync(userEmail);
+            ApplicationUser _user = new ApplicationUser();
+            _user = await userManager.FindByEmailAsync("superuser@mail.com");
 
             if (_user != null)
-                await UserManager.DeleteAsync(await UserManager.FindByEmailAsync(Configuration.GetSection("UserSettings")["UserEmail"]));
+                await userManager.DeleteAsync(await userManager.FindByEmailAsync(Configuration.GetSection("SuperUserSettings")["UserEmail"]));
 
-            var createPowerUser = await UserManager.CreateAsync(poweruser, UserPassword);
+            var createPowerUser = await userManager.CreateAsync(user, UserPassword);
             if (createPowerUser.Succeeded)
             {
-                //here we tie the new user to the "Admin" role 
-                await UserManager.AddToRoleAsync(poweruser, "Administrator");
-                await UserManager.AddClaimAsync(poweruser, new Claim("AdminPermission", "Create"));
-                await UserManager.AddClaimAsync(poweruser, new Claim("AdminPermission", "Update"));
-                await UserManager.AddClaimAsync(poweruser, new Claim("AdminPermission", "Delete"));
+
+                await userManager.AddClaimAsync(user, new Claim("adminpermission", "Create"));
+                await userManager.AddClaimAsync(user, new Claim("adminpermission", "Read"));
+                await userManager.AddClaimAsync(user, new Claim("adminpermission", "Update"));
+                await userManager.AddClaimAsync(user, new Claim("adminpermission", "Delete"));
+
+
+                await userManager.AddToRoleAsync(user, "Administrator");
             }
+
+
+
+            user = new ApplicationUser
+            {
+                UserName = Configuration.GetSection("InternalUserSettings")["UserEmail"],
+                Email = Configuration.GetSection("InternalUserSettings")["UserEmail"]
+            };
+
+            UserPassword = Configuration.GetSection("InternalUserSettings")["UserPassword"];
+
+            userEmail = Configuration.GetSection("InternalUserSettings")["UserEmail"];
+
+            _user = new ApplicationUser();
+            _user = await userManager.FindByEmailAsync("internaluser@mail.com");
+
+            if (_user != null)
+                await userManager.DeleteAsync(await userManager.FindByEmailAsync(Configuration.GetSection("InternalUserSettings")["UserEmail"]));
+
+            createPowerUser = await userManager.CreateAsync(user, UserPassword);
+            if (createPowerUser.Succeeded)
+            {
+
+                await userManager.AddClaimAsync(user, new Claim("internalpermission", "Create"));
+                await userManager.AddClaimAsync(user, new Claim("internalpermission", "Read"));
+                await userManager.AddClaimAsync(user, new Claim("internalpermission", "Update"));
+                await userManager.AddClaimAsync(user, new Claim("internalpermission", "Delete"));
+
+
+                await userManager.AddToRoleAsync(user, "Internal");
+            }
+
+
+
+
+
+            //SeedUsers(serviceProvider);
+        }
+
+        private async void CreateUser(IServiceProvider serviceProvider, string userSettings, Claim[] claims, string[] roles)
+        {
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            var user = new ApplicationUser
+            {
+                UserName = Configuration.GetSection(userSettings)["UserEmail"],
+                Email = Configuration.GetSection(userSettings)["UserEmail"]
+            };
+
+            string UserPassword = Configuration.GetSection(userSettings)["UserPassword"];
+
+            var userEmail = Configuration.GetSection(userSettings)["UserEmail"];
+
+            ApplicationUser _user = new ApplicationUser();
+            _user = await userManager.FindByEmailAsync(userEmail);
+
+            if (_user != null)
+                await userManager.DeleteAsync(await userManager.FindByEmailAsync(Configuration.GetSection(userSettings)["UserEmail"]));
+
+            var createPowerUser = await userManager.CreateAsync(user, UserPassword);
+            if (createPowerUser.Succeeded)
+            {
+                foreach (Claim c in claims)
+                    await userManager.AddClaimAsync(user, c);
+
+                foreach (string r in roles)
+                    await userManager.AddToRoleAsync(user, r);
+            }
+        }
+
+        private void SeedUsers(IServiceProvider serviceProvider)
+        {
+            //CreateUser
+            //(
+            //    serviceProvider,
+            //    "SuperUserSettings",
+            //    new Claim[]
+            //    {
+            //        new Claim("adminpermission", "Create"),
+            //        new Claim("adminpermission", "Read"),
+            //        new Claim("adminpermission", "Update"),
+            //        new Claim("adminpermission", "Delete"),
+            //    },
+            //    new string[]
+            //    {
+            //        "Administrator"
+            //    }
+            //);
+
+            CreateUser
+            (
+                serviceProvider,
+                "InternalUserSettings",
+                new Claim[]
+                {
+                    new Claim("internalpermission", "Create"),
+                    new Claim("internalpermission", "Read"),
+                    new Claim("internalpermission", "Update"),
+                    new Claim("internalpermission", "Delete"),
+                },
+                new string[]
+                {
+                    "Internal"
+                }
+            );
+
+            CreateUser
+            (
+                serviceProvider,
+                "CustomerUserSettings",
+                new Claim[]
+                {
+                    new Claim("customerpermission", "Create"),
+                    new Claim("customerpermission", "Read"),
+                    new Claim("customerpermission", "Update"),
+                    new Claim("customerpermission", "Delete"),
+                },
+                new string[]
+                {
+                    "Customer"
+                }
+            );
         }
     }
 }

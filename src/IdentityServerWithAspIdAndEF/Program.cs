@@ -27,18 +27,18 @@ namespace IdentityServerWithAspNetIdentity
                .CreateLogger();
 
             var seed = args.Contains("/seed");
-            if (seed)
-            {
+            //if (seed)
+            //{
                 Console.WriteLine("Arg \"seed\" found.");
                 args = args.Except(new[] { "/seed" }).ToArray();
-            }
+            //}
 
             var host = BuildWebHost(args);
 
-            if (seed)
-            {
+            //if (seed)
+            //{
                 SeedData.EnsureSeedData(host.Services);
-            }
+            //}
 
             host.Run();
         }

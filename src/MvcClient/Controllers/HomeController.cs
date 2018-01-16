@@ -15,7 +15,7 @@ namespace MvcClient.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize()]
         public IActionResult Secure()
         {
             ViewData["Message"] = "Secure page.";
@@ -26,6 +26,8 @@ namespace MvcClient.Controllers
         [Authorize(Policy = "AdminRights")]
         public IActionResult Administrator()
         {
+            var userClaims = HttpContext.User.Claims;
+
             return View();
         }
 

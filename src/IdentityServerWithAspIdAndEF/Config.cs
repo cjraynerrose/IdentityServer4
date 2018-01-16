@@ -4,7 +4,6 @@
 using IdentityServer4;
 using IdentityServer4.Models;
 using System.Collections.Generic;
-using System.Security.Claims;
 
 namespace IdentityServerWithAspNetIdentity
 {
@@ -17,16 +16,6 @@ namespace IdentityServerWithAspNetIdentity
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                new IdentityResource()  // NEW CHANGE
-                {
-                    Name = "AdminPermission",
-                    DisplayName = "Admin Permission",
-                    UserClaims =
-                    {
-                        "AdminPermission",
-                        "role",
-                    }
-                }
             };
         }
 
@@ -38,9 +27,9 @@ namespace IdentityServerWithAspNetIdentity
                 {
                     Scopes = // NEW CHANGE
                     {
-                        new Scope("AdminPermission", "Admin Permission")
+                        new Scope("adminpermission", "Admin Permission")
                         {
-                            UserClaims = { "AdminPermission", "role"/* NEW CHANGE -2*/ }
+                            UserClaims = { "adminpermission" }
                         }
                     }
                 }
@@ -61,7 +50,7 @@ namespace IdentityServerWithAspNetIdentity
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
 
                     RequireConsent = false,
-                    
+
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
@@ -70,18 +59,16 @@ namespace IdentityServerWithAspNetIdentity
                     RedirectUris = { "http://localhost:5002/signin-oidc" },
                     PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
 
-                    AllowAccessTokensViaBrowser = true, // NEW CHANGE
-                    AlwaysIncludeUserClaimsInIdToken = true, // NEW CHANGE -2
-
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "api1",
-                        "AdminPermission", // NEW CHANGE
-                        "role", // NEW CHANGE -2
+                        "api1"
+
                     },
                     AllowOfflineAccess = true,
+                    AlwaysSendClientClaims = true, // New Code
+                    AlwaysIncludeUserClaimsInIdToken = true // New Code
                 },
 
                 new Client
